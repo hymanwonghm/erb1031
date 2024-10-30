@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="/css/styles.css" />
+        <title>Forecast</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="card">
+                <div class="location">
+                    <h1>XXXXX</h1>
+                    <div class="coords">
+                        <span
+                            >Latitude: XXX</span
+                        >
+                        |
+                        <span
+                            >Longitude: XXXX</span
+                        >
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="current-weather">
+                    <div class="info-chunk">
+                        <span class="heading">Temperature: </span
+                        ><span class="data"
+                            >YYYYY °C</span
+                        >
+                    </div>
+                    <div class="info-chunk">
+                        <span class="heading">Wind Speed </span
+                        ><span class="data"
+                            >YYYYY km/h</span
+                        >
+                    </div>
+                    <div class="info-chunk">
+                        <span class="heading">Wind Direction: </span
+                        ><span class="data"
+                            >ZZZZZZ°</span
+                        >
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="hourly">
+                    <% for (let i = 0; i < 24; i++) {%>
+
+                    <div class="hour-block">
+                        <div class="emoji">
+                            🌞
+                        </div>
+                        <div class="time">
+                            3PM
+                        </div>
+                        <div class="temperature">
+                            40 °C
+                        </div>
+                    </div>
+                    <% } %>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,58 @@
+p {
+    color:red
+}
+
+h1 {
+    background-color:DodgerBlue;
+    margin:50px;
+    border:2px solid black;
+    text-align: center;
+}
+
+.info {
+    font-style: italic;
+}
+
+.block {
+    border:2px solid black;
+}
+
+.red {
+    color:red
+}
+
+.orange {
+    color:orange
+}
+
+.yellow {
+    color:yellow
+}
+
+.green {
+    color:green
+}
+
+.palegreen {
+    color:palegreen
+}
+
+.blue {
+    color:blue
+}
+
+.blueviolet {
+    color:blueviolet
+}
+
+.grey{
+    color:grey
+}
+
+#monkey{
+    border:6px dotted violet;
+}
+
+.btn-close{
+    text-align: end;
+}

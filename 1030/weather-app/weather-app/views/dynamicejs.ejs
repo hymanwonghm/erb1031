@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+
+<h1>Dynamic EJS Testing</h1>
+<h1>Name: <%= name %></h1>
+<p>Age: <%= age %></p>
+<p>Gender: <%= gender %></p>
+
+<ul>
+    <% for (let i=0; i<subjects.length; i++) { %>
+        <li><%= subjects[i] %></li>
+    <% } %>
+</ul>
+
+
+</body>
+</html>

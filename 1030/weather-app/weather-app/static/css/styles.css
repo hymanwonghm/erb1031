@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+* {
+    font-family: "Poppins";
+    padding: 0;
+    margin: none;
+}
+
+body {
+    background: linear-gradient(
+        to bottom right,
+        rgb(138, 243, 255),
+        rgb(168, 122, 255)
+    );
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #fff;
+    border-radius: 5px;
+}
+
+.container {
+    width: 90vw;
+    max-width: 950px;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+    padding: 30px;
+    border-radius: 12.5px;
+    width: 100%;
+    flex-basis: 100%;
+    margin: 10px 0;
+    box-sizing: border-box;
+}
+
+.location,
+.current-weather {
+    text-align: center;
+}
+
+.current-weather .info-chunk .heading {
+    font-weight: 600;
+    color: #454545;
+}
+
+.location h1 {
+    color: #3d3d3d;
+    border-bottom: 1px solid rgb(201, 201, 201);
+    padding-bottom: 10px;
+}
+
+.location .coords,
+.location .coords span {
+    color: #9d9d9d;
+}
+
+.hourly {
+    display: flex;
+    overflow-x: scroll;
+}
+
+.hourly .hour-block {
+    padding: 10px;
+    box-sizing: border-box;
+    margin: 0 2.5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+.hourly .hour-block .time,
+.hourly .hour-block .temperature {
+    width: max-content;
+}
+
+.hourly .hour-block .time {
+    font-weight: 600;
+    color: #3d3d3d;
+}
+
+.hourly .hour-block .emoji {
+    font-weight: 600;
+    font-size: 2rem;
+}
+
+.app-title {
+    text-align: center;
+    width: 100%;
+    color: white;
+    font-size: 3rem;
+    margin-top: 0;
+    padding-top: 0;
+}
+form input {
+    padding: 10px 22px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    font-size: 1rem;
+    text-transform: uppercase;
+    box-sizing: border-box;
+}
+
+form input[type="text"] {
+    width: 70%;
+}
+form input[type="submit"] {
+    width: 28%;
+    cursor: pointer;
+    background-color: rgb(168, 122, 255);
+    color: white;
+}
