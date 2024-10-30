@@ -3,12 +3,41 @@
 
 <head>
     <link rel="stylesheet" href="css/styles.css">
-    <title>Part 3 Project1</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>Forecast</title>
+
 
 </head>
 
-<body>
+<script>
+    async function showWeatherInfo(e) {
+        e.preventDefault();
+        let location = document.getElementById("locationBoX").value
+        let result = await axios(`/weather?q=${location}`)
+        document.getElementById("weather-header").innerHTML = `Weather at: ${location}`
+        document.getElementById("weather-tempbox").innerHTML = `Temperature: ${result.data.temp}`
+        document.getElementById("weather-windspeedbox").innerHTML = `Wind Speed: ${result.data.wind_speed}`
 
+        document.getElementById("weather-card").style.visibility = "visible"
+      
+    }
+</script>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <form>
+                <input id="locationBoX" type="text" name="q" placeholder="Enter Location"/>
+                <input type="submit" onclick="showWeatherInfo(event)"/>
+            </form>
+        </div>
+
+        <div id="weather-card" class="card" style="visibility: hidden">
+            <h1 id="weather-header">Weather at  </h1>
+            <p id="weather-tempbox">Temperature: </p>
+            <p id="weather-windspeedbox">Wind Speed: </p>
+        </div>
+    </div>
 </body>
 
 </html>
