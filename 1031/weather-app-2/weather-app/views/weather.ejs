@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="/css/styles.css" />
+        <title>Forecast</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="card">
+                <div class="location">
+                    <h1><%= location %></h1>
+                    <div class="coords">
+                        <span
+                            >Latitude: <%= lat %></span
+                        >
+                        |
+                        <span
+                            >Longitude: <%= lng %></span
+                        >
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="current-weather">
+                    <div class="info-chunk">
+                        <span class="heading">Temperature: </span
+                        ><span class="data"
+                            ><%= temp %> °C</span
+                        >
+                    </div>
+                    <div class="info-chunk">
+                        <span class="heading">Wind Speed </span
+                        ><span class="data"
+                            ><%= wind_speed %> km/h</span
+                        >
+                    </div>
+                    <div class="info-chunk">
+                        <span class="heading">Wind Direction: </span
+                        ><span class="data"
+                            ><%= wind_direction %>°</span
+                        >
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="hourly">
+                    <% for (let i = 0; i < 24; i++) {%>
+
+                    <div class="hour-block">
+                        <div class="emoji">
+                            <% if(forecast.weather_code[i] === 0) { %>
+                            🌞
+                            <% } else if (forecast.weather_code[i] === 1 || forecast.weather_code[i] === 2 || forecast.weather_code[i] === 3 ) { %>
+                            ☁️
+                            <% } %>
+                            
+                            
+                        </div>
+                        <div class="time">
+                            <%= new Date(forecast.time[i]).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit' }) %>
+                        </div>
+                        <div class="temperature">
+                            <%= forecast.temperature_2m[i] %> °C
+                        </div>
+                    </div>
+                    <% } %>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

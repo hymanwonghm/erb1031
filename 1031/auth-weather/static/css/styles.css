@@ -1,0 +1,56 @@
+.card {
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+    padding: 30px;
+    border-radius: 12.5px;
+    width: 100%;
+    flex-basis: 100%;
+    margin: 10px 0;
+    box-sizing: border-box;
+}
+
+.hourly {
+    display: flex;
+    overflow-x: scroll;
+}
+
+.hourly .hour-block {
+    padding: 10px;
+    box-sizing: border-box;
+    margin: 0 2.5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+.container {
+    width: 90vw;
+    max-width: 950px;
+}
+.card {
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+    padding: 30px;
+    border-radius: 12.5px;
+    width: 100%;
+    flex-basis: 100%;
+    margin: 10px 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(
+        to bottom right,
+        rgb(138, 243, 255),
+        rgb(81, 64, 240)
+    );
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: center;
+}
